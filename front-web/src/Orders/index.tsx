@@ -22,7 +22,7 @@ function Orders() {
     fetchProducts()
       .then(response => setProducts(response.data))
       .catch(error => console.log(error))
-    console.log('componente orders iniciou')
+      toast.warning('erro ao listar produto pedido')
   }, []);
   const handleSubmit = () => {
     const productsIds = selectedProducts.map(({ id }) => ({ id }));
